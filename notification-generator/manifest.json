@@ -1,0 +1,12 @@
+{
+  "icons": [
+    {
+      "src": "https://cdn.umso.co/417lumhksky1/assets/1fgwx398.jpg?w=1200&h=630&fit=crop",
+      "sizes": "256x256",
+      "type": "image/png",
+      "density": 1.0
+    }
+  ],
+  "start_url": "/notification-generator/",
+  "display": "standalone"
+}
