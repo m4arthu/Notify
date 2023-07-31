@@ -76,7 +76,8 @@ NotificationGenerator.prototype.display = function() {
 // Displays a persistent notification on the active Service Worker registration,
 // and returns a Promise that will be settled when the operation is complete.
 NotificationGenerator.prototype.displayPersistent = function(title, options) {
-    return navigator.serviceWorker.ready.then(function(serviceWorker) {
+   alert("persistent")
+  return navigator.serviceWorker.ready.then(function(serviceWorker) {
     return serviceWorker.showNotification(title, options);
 
   }).catch(function(exception) { alert(exception); });
@@ -85,6 +86,7 @@ NotificationGenerator.prototype.displayPersistent = function(title, options) {
 // Displays a non-persistent notification using the Notification constructor,
 // and returns a Promise that will be settled when the operation is complete.
 NotificationGenerator.prototype.displayNonPersistent = function(title, options) {
+  alert("persistent chamado")
     return new Promise(function(resolve) {
     var notification = null;
     try {
