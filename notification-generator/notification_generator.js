@@ -22,7 +22,7 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
     tag: this.getField(state, 'tag', ''),
     image: this.getField(state, 'image', undefined),
     icon: this.getField(state, 'icon', undefined),
-    badge: this.getField(state, 'badge', undefined),
+    //badge: this.getField(state, 'badge', undefined),
     // sound
     vibrate: this.getField(state, 'vibrate', undefined),
     timestamp: this.getField(state, 'timestamp', undefined),
@@ -62,7 +62,6 @@ NotificationGenerator.prototype.display = function() {
   var title = state.title.value,
       options = this.createNotificationOptions(state),
       persistent = state.persistent.value;
-      window.alert(title)
 
   var promise = persistent ? this.displayPersistent(title, options)
                            : this.displayNonPersistent(title, options);
