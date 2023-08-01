@@ -16,34 +16,9 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
   // Note that the default values match those in the spec:
   // https://notifications.spec.whatwg.org/#dictdef-notificationoptions
   return {
-    dir: this.getField(state, 'dir', 'auto'),
-    // lang
     body: this.getField(state, 'body', ''),
-    tag: this.getField(state, 'tag', ''),
     image: this.getField(state, 'image', undefined),
     icon: this.getField(state, 'icon', undefined),
-    //badge: this.getField(state, 'badge', undefined),
-    // sound
-    vibrate: this.getField(state, 'vibrate', undefined),
-    timestamp: this.getField(state, 'timestamp', undefined),
-    renotify: this.getField(state, 'renotify', false),
-    actions: this.getField(state, 'actions', undefined),
-    silent: this.getField(state, 'silent', false),
-    // noscreen
-    persistent: this.getField(state, 'persistent', true),
-    requireInteraction: this.getField(state, 'requireInteraction', false),
-    sticky: this.getField(state, 'sticky', false),
-    notificationCloseEvent: this.getField(state, 'notificationCloseEvent', false),
-    showTrigger: this.getField(state, 'showTrigger', undefined),
-
-    data: {
-      options: {
-        action: this.getField(state, 'action', 'default'),
-        close: this.getField(state, 'close', true),
-        notificationCloseEvent: this.getField(state, 'notificationCloseEvent', false),
-        url: document.location.toString(),
-      }
-    }
   };
 };
 
